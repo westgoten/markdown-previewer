@@ -1,0 +1,12 @@
+#editor-wrapper {
+    width: 40vw;
+}
+
+#toolbar {
+    border: 1px solid black;
+    width: 100%;
+}
+
+#editor {
+    width: 99%;
+}
