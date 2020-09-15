@@ -5,7 +5,7 @@ function Editor(props) {
     return (
         <div id='editor-wrapper'>
             <div id='toolbar'>Editor</div>
-            <textarea id='editor' type='text'></textarea>
+            <textarea id='editor' type='text' autoFocus></textarea>
         </div>
     )
 }
