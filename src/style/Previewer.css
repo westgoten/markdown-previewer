@@ -3,3 +3,8 @@
 #preview-wrapper {
     margin-bottom: 2vh;
 }
+
+#preview {
+    text-align: start;
+    overflow-wrap: break-word;
+}

@@ -1,4 +1,3 @@
-import { act } from 'react-dom/test-utils'
 import { EDIT_TEXT } from '../actions/types'
 
 const initialState = {

@@ -1,21 +1,28 @@
-import React, { useState } from 'react'
+import React from 'react'
+import { connect } from 'react-redux'
+import originalTextSelector from '../selectors/editorSelector'
+import { editText } from '../actions/actions'
 import '../style/Editor.css'
 
 function Editor(props) {
-    const [input, setInput] = useState('')
-
     function handleInput(event) {
-        setInput(event.target.value)
+        props.editText(event.target.value)
     }
 
     return (
         <div id='editor-wrapper' className='wrapper'>
             <div id='toolbar-wrapper' className='toolbar'>Editor</div>
             <textarea id='editor' className='text-block' onChange={handleInput} type='text' placeholder='Type here' autoFocus>
-                {input}
+                {props.originalText}
             </textarea>
         </div>
     )
 }
 
-export default Editor
+function mapStateToProps(state) {
+    return originalTextSelector(state)
+}
+
+const mapDispatchToProps = { editText }
+
+export default connect(mapStateToProps, mapDispatchToProps)(Editor)
