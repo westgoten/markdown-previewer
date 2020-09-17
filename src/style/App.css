@@ -1,0 +1,7 @@
+#app-wrapper {
+    text-align: center;
+    background-color: turquoise;
+    min-height: 100%;
+    height: 100%;
+    overflow: auto;
+}

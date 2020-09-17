@@ -1,0 +1,36 @@
+.wrapper {
+    margin-top: 2vh;
+    display: inline-block;
+}
+
+.toolbar {
+    width: 80vw;
+    max-width: 80vw;
+    text-align: start;
+    box-sizing: border-box;
+    background-color: skyblue;
+    font-weight: bold;
+    border: 1px solid black;
+    padding: 4px;
+    margin: 0;
+    box-shadow: 0px 1px 10px #565656;
+    position: relative;
+    top: 2px;
+    z-index: 1;
+}
+
+.text-block {
+    width: 80vw;
+    min-width: 80vw;
+    max-width: 80vw;
+    height: 40vh;
+    min-height: 40vh;
+    box-sizing: border-box;
+    border: 1px solid black;
+    box-shadow: 0px 1px 10px #565656;
+    background-color: white;
+    position: relative;
+    padding: 4px;
+    margin: 0;
+    z-index: 0;
+}
