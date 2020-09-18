@@ -1,5 +1,9 @@
 @import 'TextWindow.css';
 
+:root {
+    --detail-color: #175D72;
+}
+
 #preview-wrapper {
     margin-bottom: 2vh;
 }
@@ -7,6 +11,43 @@
 #preview {
     text-align: start;
     height: auto;
-    padding-top: 0;
+    padding: 0 8px 0 8px;
     overflow-wrap: break-word;
+}
+
+/* MARKDOWN STYLES */
+#preview code {
+    background-color: #f6f8fa;
+    padding: 4px;
+}
+
+#preview pre {
+    background-color: #f6f8fa;
+    padding: 12px;
+    overflow: auto;
+}
+
+#preview pre code {
+    background-color: transparent;
+    padding: 0;
+}
+
+#preview blockquote {
+    color: var(--detail-color);
+    border-left: 3px solid var(--detail-color);
+    padding-left: 5px;
+}
+
+#preview table, th, td {
+    border-collapse: collapse;
+    border: 2px solid var(--detail-color);
+    padding: 6px;
+}
+
+#preview th {
+    background-color: lightblue;
+}
+
+#preview img {
+    max-width: 80%;
 }
