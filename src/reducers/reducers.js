@@ -1,4 +1,6 @@
 import { EDIT_TEXT } from '../actions/types'
+import marked from '../utils/markdownParser'
+import DOMPurify from 'dompurify'
 
 const initialState = {
     originalText: '',
@@ -10,7 +12,7 @@ export function editingReducer(state = initialState, action) {
         case EDIT_TEXT:
             return {
                 originalText: action.text,
-                parsedText: action.text
+                parsedText: DOMPurify.sanitize(marked(action.text))
             }
         default:
             return state
