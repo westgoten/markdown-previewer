@@ -12,7 +12,11 @@ function Previewer(props) {
 
     return (
         <div id='preview-wrapper' className='wrapper'>
-            <div id='preview-toolbar' className='toolbar'>Previewer</div>
+            <div id='preview-toolbar' className='toolbar'>
+                <i className='fab fa-free-code-camp toolbar-icon'></i>
+                <span className='toolbar-title'>Previewer</span>
+                <i className='fas fa-expand-arrows-alt resize-button'></i>
+            </div>
             <div id='preview' className='text-block' ref={preview}></div>
         </div>
     )

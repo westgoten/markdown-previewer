@@ -21,6 +21,24 @@
     z-index: 1;
 }
 
+.toolbar-icon {
+    margin-left: 2px;
+}
+
+.toolbar-title {
+    margin-left: 6px;
+}
+
+.resize-button {
+    float: right;
+    margin: 2px;
+    cursor: pointer;
+}
+
+.resize-button:hover {
+    color: #9ffcf6;
+}
+
 .text-block {
     width: 68.3rem;
     min-width: 68.3rem;

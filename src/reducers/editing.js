@@ -1,5 +1,5 @@
 import { EDIT_TEXT } from '../actions/types'
-import INITIAL_TEXT from '../utils/initialText'
+import INITIAL_TEXT from '../utils/consts/initialText'
 import marked from '../utils/markdownParser'
 import DOMPurify from 'dompurify'
 
@@ -8,7 +8,7 @@ const initialState = {
     parsedText: parseAndSanitizeMarkdown(INITIAL_TEXT)
 }
 
-export function editingReducer(state = initialState, action) {
+function editing(state = initialState, action) {
     switch(action.type) {
         case EDIT_TEXT:
             return {
@@ -23,3 +23,5 @@ export function editingReducer(state = initialState, action) {
 function parseAndSanitizeMarkdown(text) {
     return DOMPurify.sanitize(marked(text))
 }
+
+export default editing

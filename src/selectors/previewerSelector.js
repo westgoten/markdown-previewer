@@ -1,9 +1,16 @@
 import { createSelector } from '@reduxjs/toolkit'
 
-const parsedTextSelector = createSelector(getParsedText, (parsedText) => ({ parsedText }))
+const parsedTextSelector = createSelector(
+    [getParsedText, getMaximizedState], 
+    (parsedText, maximized) => ({ parsedText, maximized })
+)
 
 function getParsedText(state) {
-    return state.parsedText
+    return state.editing.parsedText
+}
+
+function getMaximizedState(state) {
+    return state.maximized
 }
 
 export default parsedTextSelector

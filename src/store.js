@@ -1,6 +1,8 @@
-import { configureStore } from '@reduxjs/toolkit'
-import { editingReducer } from './reducers/reducers'
+import { configureStore, combineReducers } from '@reduxjs/toolkit'
+import editing from './reducers/editing'
+import maximized from './reducers/maximized'
 
-const store = configureStore({ reducer: editingReducer })
+const rootReducer = combineReducers({ editing, maximized })
+const store = configureStore({ reducer: rootReducer })
 
 export default store
