@@ -4,11 +4,11 @@
     --detail-color: #175D72;
 }
 
-#preview-wrapper {
+.preview-wrapper-normal {
     margin-bottom: 2%;
 }
 
-#preview {
+.preview {
     text-align: start;
     height: auto;
     padding: 0 8px 0 8px;

@@ -1,6 +1,11 @@
 @import 'TextWindow.css';
 
-#editor {
+.editor-normal {
     resize: vertical;
+    outline: none;
+}
+
+.editor-maximized {
+    resize: none;
     outline: none;
 }
