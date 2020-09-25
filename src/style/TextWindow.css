@@ -33,10 +33,7 @@
     float: right;
     margin: 2px;
     cursor: pointer;
-}
-
-.resize-button:hover {
-    color: #9ffcf6;
+    transition: color 0.5s;
 }
 
 .text-block {
@@ -60,7 +57,7 @@
     margin: 2%;
     display: inline-block;
     font-size: 16px;
-    height: 96%;
+    height: 94%;
     width: 96%;
 }
 
